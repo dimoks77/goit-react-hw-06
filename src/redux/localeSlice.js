@@ -1,10 +1,16 @@
-const localInitialState = {
-    lang: 'uk',
-};
+import { createSlice  } from "@reduxjs/toolkit";
 
-export const localeReducer = (state = localInitialState, action) => {
-    switch (action.type) {
-        case: 'locale/changeLang':
-            return {}
-    }
-}
+const localSlice = createSlice({
+    name: 'local',
+    initialState: {
+        lang: 'uk',
+    },
+    reducers: {
+        changeLang: (state, action) => {
+            state.lang = action.payload
+        },
+    },
+});
+
+export const { changeLang } = localSlice.actions;
+export const localReducer = localSlice.reducer;
