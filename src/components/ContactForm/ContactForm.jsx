@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
-import { useDispatch, useSelector } from "react-redux";
 
 const contactScheme = Yup.object().shape({
   name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("This is a requarid field"),

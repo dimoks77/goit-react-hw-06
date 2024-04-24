@@ -7,7 +7,7 @@ const Contact = ({ contact }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(deleteContact(id)); // Отправляем экшен на удаление контакта
+    dispatch(deleteContact(id));
   };
 
   return (
